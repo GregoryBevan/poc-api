@@ -1,0 +1,16 @@
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/public
+    username: postgres
+    password: maifi
+  liquibase:
+    change-log: classpath:db/changelog/db-changelog.sql
+    url: jdbc:postgresql://localhost:5432/postgres
+    user: postgres
+    password: maifi
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
+    liquibase: DEBUG
