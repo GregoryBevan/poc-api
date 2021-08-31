@@ -1,6 +1,8 @@
 package me.elgregos.pocapi.repository
 
-import me.elgregos.pocapi.domain.Booking
+import me.elgregos.pocapi.booking.domain.Booking
+import me.elgregos.pocapi.booking.domain.repository.BookingRepository
+import me.elgregos.pocapi.booking.infra.repository.insert
 import me.elgregos.pocapi.util.WithPostgresContainer
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -15,10 +17,10 @@ class BookingRepositoryTest: WithPostgresContainer() {
     lateinit var bookingRepository: BookingRepository
 
     @Test
-    fun `should store booking`() {
+    fun `should store new booking`() {
         val booking = Booking(UUID.randomUUID(), "This a test")
 
-        val result = bookingRepository.save(booking.also { it.markNew() }).block()
+        val result = bookingRepository.insert(booking).block()
 
         assertEquals(booking, result)
 

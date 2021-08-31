@@ -1,4 +1,4 @@
-package me.elgregos.pocapi.domain
+package me.elgregos.pocapi.booking.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.Transient
