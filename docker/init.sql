@@ -1,0 +1,3 @@
+CREATE DATABASE "poc-api";
+CREATE USER admin WITH PASSWORD 'postgres';
+GRANT ALL PRIVILEGES ON DATABASE "poc-api" to admin;

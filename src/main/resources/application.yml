@@ -1,15 +1,15 @@
 spring:
   r2dbc:
-    url: r2dbc:pool:postgresql://localhost:5432/public
-    username: postgres
-    password: maifi
+    url: r2dbc:pool:postgresql://${POSTGRESQL_ADDON_HOST:localhost}:${POSTGRESQL_ADDON_PORT:5432}/${POSTGRESQL_ADDON_DB:poc-api}
+    username: ${POSTGRESQL_ADDON_USER:admin}
+    password: ${POSTGRESQL_ADDON_PASSWORD:postgres}
     initialSize: 2
     maxSize: 10
   liquibase:
     change-log: classpath:db/changelog/db-changelog.sql
-    url: jdbc:postgresql://localhost:5432/postgres
-    user: postgres
-    password: maifi
+    url: jdbc:postgresql://${POSTGRESQL_ADDON_HOST:localhost}:${POSTGRESQL_ADDON_PORT:5432}/${POSTGRESQL_ADDON_DB:poc-api}
+    user: ${POSTGRESQL_ADDON_USER:admin}
+    password: ${POSTGRESQL_ADDON_PASSWORD:postgres}
 logging:
   level:
     org:
