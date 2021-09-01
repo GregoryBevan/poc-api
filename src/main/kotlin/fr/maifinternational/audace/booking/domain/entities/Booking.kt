@@ -1,4 +1,4 @@
-package me.elgregos.pocapi.booking.domain.entities
+package fr.maifinternational.audace.booking.domain.entities
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.Transient

@@ -2,7 +2,7 @@
 
 --- PERSONS
 
---changeset poc-api:1
+--changeset audace:1
 CREATE TABLE IF NOT EXISTS booking (
   id UUID primary key,
   details varchar(100) not null

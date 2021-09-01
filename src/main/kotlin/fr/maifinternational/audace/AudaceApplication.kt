@@ -1,11 +1,11 @@
-package me.elgregos.pocapi
+package fr.maifinternational.audace
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PocapiApplication
+class AudaceApplication
 
 fun main(args: Array<String>) {
-	runApplication<PocapiApplication>(*args)
+	runApplication<AudaceApplication>(*args)
 }

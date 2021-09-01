@@ -1,4 +1,4 @@
-package me.elgregos.pocapi
+package fr.maifinternational.audace
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
@@ -12,7 +12,7 @@ import org.testcontainers.junit.jupiter.Testcontainers
 
 @SpringBootTest
 @EnableR2dbcRepositories
-class PocapiApplicationTests {
+class AudaceApplicationTests {
 
     @Test
     fun contextLoads() {

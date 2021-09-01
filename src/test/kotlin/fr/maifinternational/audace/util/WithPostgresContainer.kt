@@ -1,4 +1,4 @@
-package me.elgregos.pocapi.util
+package fr.maifinternational.audace.util
 
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase
 import org.springframework.test.context.DynamicPropertyRegistry

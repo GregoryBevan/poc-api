@@ -1,9 +1,9 @@
-package me.elgregos.pocapi.repository
+package fr.maifinternational.audace.repository
 
-import me.elgregos.pocapi.booking.domain.entities.Booking
-import me.elgregos.pocapi.booking.domain.repository.BookingRepository
-import me.elgregos.pocapi.booking.infra.repository.insert
-import me.elgregos.pocapi.util.WithPostgresContainer
+import fr.maifinternational.audace.booking.domain.entities.Booking
+import fr.maifinternational.audace.booking.domain.repository.BookingRepository
+import fr.maifinternational.audace.booking.infra.repository.insert
+import fr.maifinternational.audace.util.WithPostgresContainer
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.r2dbc.core.DatabaseClient
