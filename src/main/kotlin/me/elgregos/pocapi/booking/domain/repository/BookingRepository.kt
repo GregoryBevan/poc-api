@@ -1,6 +1,6 @@
 package me.elgregos.pocapi.booking.domain.repository
 
-import me.elgregos.pocapi.booking.domain.Booking
+import me.elgregos.pocapi.booking.domain.entities.Booking
 import org.springframework.data.r2dbc.repository.R2dbcRepository
 import java.util.*
 

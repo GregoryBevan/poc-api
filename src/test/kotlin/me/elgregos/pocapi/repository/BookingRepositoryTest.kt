@@ -1,6 +1,6 @@
 package me.elgregos.pocapi.repository
 
-import me.elgregos.pocapi.booking.domain.Booking
+import me.elgregos.pocapi.booking.domain.entities.Booking
 import me.elgregos.pocapi.booking.domain.repository.BookingRepository
 import me.elgregos.pocapi.booking.infra.repository.insert
 import me.elgregos.pocapi.util.WithPostgresContainer
@@ -11,7 +11,6 @@ import reactor.test.StepVerifier
 import java.time.Duration
 import java.util.*
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 @SpringBootTest
 class BookingRepositoryTest : WithPostgresContainer() {
