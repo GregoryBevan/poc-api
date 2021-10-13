@@ -23,6 +23,8 @@ jobs:
           cache: gradle
       - name: Release
         run: ./gradlew release -Prelease.customPassword=${GITHUB_TOKEN} -Prelease.customUsername=${GITHUB_ACTOR}  -Prelease.versionIncrementer=increment${RELEASE_TYPE}
+      - name: Merge in production
+        run: git checkout production; git merge main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_TYPE: ${{ github.event.inputs.release-version || 'Minor' }}
