@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       release-type:
-        description: 'Release type (major, minor, patch)'
+        description: 'Release type (Major, Minor, Patch)'
         required: true
-        default: 'minor'
+        default: 'Minor'
 
 jobs:
   build:
@@ -25,4 +25,4 @@ jobs:
         run: ./gradlew release -Prelease.customPassword=${GITHUB_TOKEN} -Prelease.customUsername=${GITHUB_ACTOR}  -Prelease.versionIncrementer=increment${RELEASE_TYPE}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_TYPE: ${{ github.event.inputs.release-version || 'minor' }}
+          RELEASE_TYPE: ${{ github.event.inputs.release-version || 'Minor' }}
