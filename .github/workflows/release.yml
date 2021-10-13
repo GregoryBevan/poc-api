@@ -23,7 +23,7 @@ jobs:
           cache: gradle
       - name: Release
         run:
-          ./gradlew release  -Prelease.versionIncrementer=increment${{ github.event.inputs.release-type }} -Prelease.customPassword=${GITHUB_TOKEN} -Prelease.customUsername=${GITHUB_ACTOR}
+          ./gradlew release --info -Prelease.versionIncrementer=increment${{ github.event.inputs.release-type }} -Prelease.customPassword=${GITHUB_TOKEN} -Prelease.customUsername=${GITHUB_ACTOR}
       - name: Merge in production
         uses: devmasx/merge-branch@master
         with:
