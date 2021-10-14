@@ -26,4 +26,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo ${{ github.event_name }}
-          echo ${{ toJSON(github.event) }}
+          echo ${{ github.event.milestone.title }}
